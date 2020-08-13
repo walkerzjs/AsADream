@@ -18,7 +18,7 @@ made herself on the way.
 
 - This however showed weasel
 - Well uncritical so misled
-  - this is very interesting
+- this is very interesting
 - Goodness much until that fluid owl
 
 When she reached the first hills of the **Italic Mountains**, she had a last
@@ -106,3 +106,17 @@ to its own, safe country. But nothing the copy said could convince her and so it
 didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
 with Longe and Parole and dragged her into their agency, where they abused her
 for their projects again and again.
+
+```javascript
+let a = 115
+```
+
+```jsx{6}
+var s = "JavaScript syntax highlighting"
+alert(s)
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
