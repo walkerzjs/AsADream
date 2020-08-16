@@ -82,22 +82,43 @@ const ThemeToggle = props => {
 
   const onChange = () => {
     theme.setTheme({ mode: theme.mode === "light" ? "dark" : "light" })
+    window.__theme = theme.mode === "light" ? "dark" : "light"
   }
 
-  return (
-    <ThemeToggleC aria-label="Click to change theme">
-      <input
-        type="checkbox"
-        aria-label="toggle the theme"
-        onChange={onChange}
-        checked={
-          theme !== undefined ? (theme.mode === "light" ? true : false) : false
-        }
-      />
+  const isChecked = () => {
+    if (typeof window !== "undefined") {
+      let result = window.__theme === "light" ? true : false
+      return result
+    } else {
+      return true
+    }
+  }
 
-      <span className="slider round"></span>
-    </ThemeToggleC>
-  )
+  // useEffect(() => {
+  //   console.log("theme: ", theme)
+  //   console.log("re render")
+  // })
+
+  let content = <div style={{ width: "60px" }}></div>
+  // let content = null
+  if (typeof window !== "undefined" && window.__theme) {
+    content = (
+      <ThemeToggleC>
+        <label>
+          <input
+            aria-label="Click to change theme"
+            type="checkbox"
+            onChange={onChange}
+            checked={isChecked()}
+          />
+
+          <span className="slider round"></span>
+        </label>
+      </ThemeToggleC>
+    )
+  }
+
+  return content
 }
 
 export default ThemeToggle

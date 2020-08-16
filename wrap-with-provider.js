@@ -13,7 +13,6 @@ const WrapWithProvider = ({ element }) => {
   // Instantiating store in `wrapRootElement` handler ensures:
   //  - there is fresh store for each SSR page
   //  - it will be called only once in browser, when React mounts
-  const initialState = {}
 
   useEffect(() => {
     const savedTheme = storage.getItem("theme")
@@ -39,20 +38,25 @@ const WrapWithProvider = ({ element }) => {
     }
   }, [theme])
 
-  const store =
-    process.env.NODE_ENV === "production"
-      ? createStore(reducers, initialState)
-      : createStore(reducers, initialState, composeWithDevTools())
   return (
     <ThemeProvider theme={{ mode: theme.mode, setTheme: setTheme }}>
       <GlobalStyle />
-      <Provider store={store}>{element}</Provider>
+      {element}
     </ThemeProvider>
   )
 }
 
 const Wrapper = ({ element }) => {
-  return <WrapWithProvider element={element} />
+  const initialState = {}
+  const store =
+    process.env.NODE_ENV === "production"
+      ? createStore(reducers, initialState)
+      : createStore(reducers, initialState, composeWithDevTools())
+  return (
+    <Provider store={store}>
+      <WrapWithProvider element={element} />
+    </Provider>
+  )
 }
 
 export default Wrapper

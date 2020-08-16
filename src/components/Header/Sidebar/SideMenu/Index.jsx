@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Header from "./Header/Index";
-import MenuList from "./MenuList/Index";
-import { useSelector } from "react-redux";
+import React from "react"
+import styled from "styled-components"
+import Header from "./Header/Index"
+import MenuList from "./MenuList/Index"
+import { useSelector } from "react-redux"
 
 const SideMenu_ = styled.div`
   position: fixed;
@@ -26,22 +26,20 @@ const SideMenu_ = styled.div`
   /* transition-property: opacity, transform;
   transition-duration: 3s;
   transition-timing-function: ease; */
-  visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
+  visibility: ${props => (props.isOpen ? "visible" : "hidden")};
 
-  transform: ${(props) =>
-    props.isOpen ? "translateX(0)" : "translateX(100%)"};
-  opacity: ${(props) => (props.isOpen ? "1" : "0")};
-`;
+  transform: ${props => (props.isOpen ? "translateX(0)" : "translateX(100%)")};
+  opacity: ${props => (props.isOpen ? "1" : "0")};
+`
 
-const SideMenu = (props) => {
-  const isOpen = useSelector((state) => state.sidebarReducer.isOpen);
-
+const SideMenu = props => {
+  const isOpen = useSelector(state => state.sidebarReducer.isOpen)
   return (
     <SideMenu_ isOpen={isOpen} aria-label="Sidebar">
       <Header />
       <MenuList />
     </SideMenu_>
-  );
-};
+  )
+}
 
-export default SideMenu;
+export default SideMenu
