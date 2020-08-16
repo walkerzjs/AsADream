@@ -391,12 +391,12 @@ html {
   /* overflow: hidden; */
   /* height: 100%; */
   touch-action: manipulation;
-  overscroll-behavior-y: none;
+  /* overscroll-behavior-y: none; */
 }
 
 body {
   font-family: "Noto Sans", serif;
-  overscroll-behavior-y: none;
+  /* overscroll-behavior-y: none; */
   /* overflow: auto; */
   /* height: 100%; */
 }

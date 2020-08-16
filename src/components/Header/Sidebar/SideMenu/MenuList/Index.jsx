@@ -21,9 +21,12 @@ const MenuList_ = styled.ul`
 const MenuList = props => {
   return (
     <MenuList_>
-      <MenuItem sectionId="aboutMe" sectionName="About Me" />
-      <MenuItem sectionId="projects" sectionName="Projects" />
-      <MenuItem sectionId="contact" sectionName="Contact" />
+      <MenuItem
+        id="https://my-portfoliojsz.com"
+        label="My Portfolio"
+        type="external"
+      />
+      <MenuItem id="walkerzjs2@gmail.com" label="Send Me Email" type="email" />
       <ThemeToggle />
     </MenuList_>
   )

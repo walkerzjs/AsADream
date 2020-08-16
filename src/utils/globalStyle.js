@@ -10,14 +10,23 @@ const textColor = theme("mode", {
   dark: "var(--white)",
 })
 
+const textColor2 = theme("mode", {
+  light: "hsla(0,0%,0%,0.59)",
+  dark: "var(--white)",
+})
+
 const GlobalStyle = createGlobalStyle`
   body {
     background-color:${backgroundColor};
     color: ${textColor};
   }
   blockquote{
-    color: ${textColor};
+    color: ${textColor2};
     border-color: ${textColor};
+  }
+
+  #___gatsby{
+      height: 100vh;
   }
 
 `

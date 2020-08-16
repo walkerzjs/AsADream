@@ -10,6 +10,8 @@ const SidebarToggle_ = styled.button`
   background: none;
   border: none;
   margin-right: 2rem;
+  display: flex;
+  align-items: center;
   img {
     margin: 0;
     display: block;

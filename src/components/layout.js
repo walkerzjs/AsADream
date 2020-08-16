@@ -16,8 +16,11 @@ const textColor = theme("mode", {
 })
 
 const Container = styled.div`
+position: relative;
   width: 100%;
-
+  min-height: 100vh;
+  padding-top: 70px;
+  /* padding: ${rhythm(1.5)} ${rhythm(3 / 4)}; */
   background-color: ${backgroundColor};
 
   transition: all 0.2s ease-out;
@@ -80,17 +83,44 @@ const Layout = ({ location, title, children }) => {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          marginTop: "70px",
+
           // maxWidth: rhythm(24),
           fontFamily: `Noto Sans, sans-serif`,
           maxWidth: "1366px",
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(1.5)} 30px`,
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <footer
+          style={{
+            position: "absolute",
+            bottom: "20px",
+            margin: "auto",
+          }}
+        >
+          © {new Date().getFullYear()}, By{" "}
+          <a
+            href="https://my-portfoliojsz.com"
+            target="__blank"
+            rel="noopener noreferrer"
+          >
+            Junshuai Zhang (Jacob)
+          </a>
+          &nbsp;&nbsp;
+          <a
+            href="https://www.linkedin.com/in/junshuai-zhang-jacob-55774594/"
+            target="__blank"
+          >
+            LinkedIn
+          </a>
+          &nbsp;&nbsp;
+          <a
+            href="https://github.com/walkerzjs"
+            target="__blank"
+            rel="noopener noreferrer"
+          >
+            Github
+          </a>
         </footer>
       </div>
     </Container>

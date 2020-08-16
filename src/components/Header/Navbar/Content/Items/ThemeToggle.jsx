@@ -4,6 +4,8 @@ import styled, { ThemeContext } from "styled-components"
 // https://www.w3schools.com/howto/howto_css_switch.asp
 const ThemeToggleC = styled.li`
   list-style: none;
+  height: 30px;
+
   /* The switch - the box around the slider */
   label {
     position: relative;
@@ -78,20 +80,31 @@ const ThemeToggleC = styled.li`
   }
 `
 
-const ThemeToggle = props => {
+const ThemeToggle = () => {
   const theme = useContext(ThemeContext)
 
   const onChange = () => {
     theme.setTheme({ mode: theme.mode === "light" ? "dark" : "light" })
+    window.__theme = theme.mode === "light" ? "dark" : "light"
   }
 
-  const [isMounted, setIsMounted] = useState(false)
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
+  const isChecked = () => {
+    if (typeof window !== "undefined") {
+      let result = window.__theme === "light" ? true : false
+      return result
+    } else {
+      return true
+    }
+  }
 
-  let content = <li style={{ listStyle: "none", width: "60px" }}></li>
-  if (isMounted) {
+  // useEffect(() => {
+  //   console.log("theme: ", theme)
+  //   console.log("re render")
+  // })
+
+  let content = <div style={{ width: "60px" }}></div>
+  // let content = null
+  if (typeof window !== "undefined" && window.__theme) {
     content = (
       <ThemeToggleC>
         <label>
@@ -99,7 +112,7 @@ const ThemeToggle = props => {
             aria-label="Press Space key to toggle the theme"
             type="checkbox"
             onChange={onChange}
-            checked={theme.mode === "light" ? true : false}
+            checked={isChecked()}
           />
 
           <span className="slider round"></span>

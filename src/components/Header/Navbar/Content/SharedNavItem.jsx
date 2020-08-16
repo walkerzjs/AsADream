@@ -11,6 +11,7 @@ const textColor = theme("mode", {
 
 const NavLink_ = styled.li`
   list-style: none;
+  margin-right: 20px !important;
 
   /* width: 92px; */
   /* height: 2rem; */
@@ -39,7 +40,25 @@ const NavLink_ = styled.li`
 const SharedNavButton = props => {
   return (
     <NavLink_ aria-label={`link to ${props.label} section`}>
-      <Link to={`${props.id}`}>{props.label}</Link>
+      {(() => {
+        switch (props.type) {
+          case "external":
+            return (
+              <a href={props.id} target="__blank" rel="noopener noreferrer">
+                {props.label}
+              </a>
+            )
+          case "email":
+            return (
+              <a href={`mailto:${props.id}`} rel="noopener noreferrer">
+                {props.label}
+              </a>
+            )
+
+          default:
+            return <Link to={`${props.id}`}>{props.label}</Link>
+        }
+      })()}
     </NavLink_>
   )
 }

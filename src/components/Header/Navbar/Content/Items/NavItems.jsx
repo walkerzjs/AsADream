@@ -5,11 +5,11 @@ import styled from "styled-components"
 
 const NavItems_ = styled.ul`
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   margin: 0;
   margin-right: 9.3vw;
-  width: 344px;
+  /* width: 344px; */
   & li {
     margin: 0;
   }
@@ -25,10 +25,15 @@ const NavItems = props => {
       <SharedNavItem
         ariaLabel="navigate to Junshuai's portfolio"
         id="https://my-portfoliojsz.com/"
-        label="Portfolio"
+        label="MyPortfolio"
+        type="external"
       />
-      <SharedNavItem id="projects" label="Projects" />
-      <SharedNavItem id="contact" label="Contact" />
+
+      <SharedNavItem
+        id="walkerzjs2@gmail.com"
+        label="SendMeEmail"
+        type="email"
+      />
 
       <ThemeToggle />
     </NavItems_>

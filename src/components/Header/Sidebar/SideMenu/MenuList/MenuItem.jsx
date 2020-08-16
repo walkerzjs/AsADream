@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import AnchorLink from "react-anchor-link-smooth-scroll"
 import theme from "styled-theming"
 
 const textColor = theme("mode", {
@@ -29,13 +28,37 @@ const MenuItem_ = styled.li`
 const MenuItem = props => {
   return (
     <MenuItem_>
-      <AnchorLink
+      {/* <AnchorLink
         offset="62"
         href={`#${props.sectionId}`}
         aria-label={`Click to ${props.sectionName} section`}
       >
         {props.sectionName}
-      </AnchorLink>
+      </AnchorLink> */}
+
+      {(() => {
+        switch (props.type) {
+          case "external":
+            return (
+              <a href={props.id} target="__blank" rel="noopener noreferrer">
+                {props.label}
+              </a>
+            )
+          case "email":
+            return (
+              <a href={`mailto:${props.id}`} rel="noopener noreferrer">
+                {props.label}
+              </a>
+            )
+
+          default:
+            return (
+              <a href={`${props.id}`} rel="noopener noreferrer">
+                {props.label}
+              </a>
+            )
+        }
+      })()}
     </MenuItem_>
   )
 }

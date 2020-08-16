@@ -29,12 +29,14 @@ export default function HTML(props) {
                       setCSSVar(key, theme[key]);
                     }
                     localStorage.setItem("theme", inputTheme);
+                    window.__theme = "dark"
                   } else {
                     const theme = themeConfig.light;
                     for (let key in theme) {
                       setCSSVar(key, theme[key]);
                     }
                     localStorage.setItem("theme", inputTheme);
+                    window.__theme = "light"
                   }
                 }
               
