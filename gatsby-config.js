@@ -6,7 +6,7 @@ module.exports = {
       summary: `living in Australia developing interesting things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `http://localhost:9000/`,
+    siteUrl: `https://asadream.my-portfoliojsz.com/`,
     social: {
       twitter: `walkerzjs`,
     },
@@ -34,7 +34,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: "590",
+              wrapperStyle: `max-width: 590px`,
+              // maxWidth: "590",
             },
           },
           {
