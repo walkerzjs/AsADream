@@ -28,19 +28,11 @@ const MenuItem_ = styled.li`
 const MenuItem = props => {
   return (
     <MenuItem_>
-      {/* <AnchorLink
-        offset="62"
-        href={`#${props.sectionId}`}
-        aria-label={`Click to ${props.sectionName} section`}
-      >
-        {props.sectionName}
-      </AnchorLink> */}
-
       {(() => {
         switch (props.type) {
           case "external":
             return (
-              <a href={props.id} target="__blank" rel="noopener noreferrer">
+              <a href={props.id} rel="noopener noreferrer">
                 {props.label}
               </a>
             )

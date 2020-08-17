@@ -9,7 +9,7 @@ const color = theme("mode", {
 const SidebarToggle_ = styled.button`
   background: none;
   border: none;
-  margin-right: 2rem;
+  margin-right: 17.6px;
   display: flex;
   align-items: center;
   img {

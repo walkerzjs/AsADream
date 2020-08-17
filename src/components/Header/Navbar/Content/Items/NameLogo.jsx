@@ -9,7 +9,7 @@ const NameLogo_ = styled.ul`
     margin: 0;
   }
   @media (max-width: 672px) {
-    margin-left: 2rem;
+    margin-left: 17.6px;
   }
 `
 
