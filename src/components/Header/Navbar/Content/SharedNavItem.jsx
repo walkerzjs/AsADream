@@ -44,7 +44,7 @@ const SharedNavButton = props => {
         switch (props.type) {
           case "external":
             return (
-              <a href={props.id} target="__blank" rel="noopener noreferrer">
+              <a href={props.id} rel="noopener noreferrer">
                 {props.label}
               </a>
             )
