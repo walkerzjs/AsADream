@@ -1,7 +1,7 @@
 ---
 title: The ways to fix a navbar on top
 date: "2020-08-18"
-description: "This is my first personal post on my own blog website."
+description: "Discuss the difference developing navbar using position: sticky and position: fixed"
 ---
 
 When I aws developing my project, I want to have a navbar fixed on top of the page all the time, and the rest of the content should stay below it when the page loads.
