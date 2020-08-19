@@ -86,7 +86,7 @@ const Layout = ({ location, title, children }) => {
 
           // maxWidth: rhythm(24),
           fontFamily: `Noto Sans, sans-serif`,
-          maxWidth: "1366px",
+          maxWidth: "768px",
           padding: `${rhythm(1.5)} 30px`,
         }}
       >
