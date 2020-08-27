@@ -7,7 +7,6 @@ import reducers from "./store/reducers/index"
 import { ThemeProvider } from "styled-components"
 import GlobalStyle from "./src/utils/globalStyle"
 
-// eslint-disable-next-line react/display-name,react/prop-types
 const WrapWithProvider = ({ element }) => {
   const [theme, setTheme] = useState({ mode: "light" })
   // Instantiating store in `wrapRootElement` handler ensures:

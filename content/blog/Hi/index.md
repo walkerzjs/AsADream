@@ -25,11 +25,4 @@ This is another photo I like, <a
 <br />
 Oh, last but not least, let me share a music I am enjoying.
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/NrHRTNeni-U"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GkJZ8TUiHFs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
