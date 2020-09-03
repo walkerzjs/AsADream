@@ -98,7 +98,7 @@ const Layout = ({ location, title, children }) => {
             margin: "auto",
           }}
         >
-          © {new Date().getFullYear()}, By{" "}
+          {new Date().getFullYear()}, By{" "}
           <a
             href="https://my-portfoliojsz.com"
             target="__blank"
