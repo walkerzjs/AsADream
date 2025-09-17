@@ -100,7 +100,7 @@ const Layout = ({ location, title, children }) => {
         >
           {new Date().getFullYear()}, By{" "}
           <a
-            href="https://my-portfoliojsz.com"
+            href="https://master.dj3cz2uxgebt1.amplifyapp.com/"
             target="__blank"
             rel="noopener noreferrer"
           >
@@ -108,7 +108,7 @@ const Layout = ({ location, title, children }) => {
           </a>
           &nbsp;&nbsp;
           <a
-            href="https://www.linkedin.com/in/junshuai-zhang-jacob-55774594/"
+            href="https://www.linkedin.com/in/junshuai-zhang-55774594/"
             target="__blank"
           >
             LinkedIn
