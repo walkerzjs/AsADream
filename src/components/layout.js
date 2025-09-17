@@ -100,7 +100,7 @@ const Layout = ({ location, title, children }) => {
         >
           {new Date().getFullYear()}, By{" "}
           <a
-            href="https://master.dj3cz2uxgebt1.amplifyapp.com/"
+            href="https://www.jacob-portfolio.com/"
             target="__blank"
             rel="noopener noreferrer"
           >

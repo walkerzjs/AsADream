@@ -24,8 +24,8 @@ const NavItems = props => {
     <NavItems_>
       <SharedNavItem
         ariaLabel="navigate to Junshuai's portfolio"
-        id="https://master.dj3cz2uxgebt1.amplifyapp.com/"
-        label="MyPortfolio"
+        id="https://www.jacob-portfolio.com/"
+        label="Portfolio"
         type="external"
       />
 

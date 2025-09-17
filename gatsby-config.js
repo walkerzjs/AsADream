@@ -6,7 +6,7 @@ module.exports = {
       summary: `living in Australia developing interesting things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://asadream.my-portfoliojsz.com/`,
+    siteUrl: `https://blog.jacob-portfolio.com/`,
     social: {
       twitter: `walkerzjs`,
     },

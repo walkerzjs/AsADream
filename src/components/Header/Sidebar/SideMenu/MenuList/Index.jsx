@@ -22,11 +22,11 @@ const MenuList = props => {
   return (
     <MenuList_>
       <MenuItem
-        id="https://my-portfoliojsz.com"
-        label="My Portfolio"
+        id="https://www.jacob-portfolio.com/"
+        label="Portfolio"
         type="external"
       />
-      <MenuItem id="walkerzjs2@gmail.com" label="Send Me Email" type="email" />
+      <MenuItem id="junshuai.jacob.zhang@gmail.com" label="Send Me Email" type="email" />
       <ThemeToggle />
     </MenuList_>
   )
