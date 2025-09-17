@@ -3,7 +3,7 @@
     "develop": {
       "plugins": [
         {
-          "name": "babel-plugin-lodash",
+          "name": "@sigmacomputing/babel-plugin-lodash",
           "options": {}
         },
         {
@@ -16,6 +16,7 @@
             "minify": true,
             "namespace": "",
             "transpileTemplateLiterals": true,
+            "topLevelImportPaths": [],
             "pure": false,
             "ssr": false
           }
@@ -52,7 +53,7 @@
     "develop-html": {
       "plugins": [
         {
-          "name": "babel-plugin-lodash",
+          "name": "@sigmacomputing/babel-plugin-lodash",
           "options": {}
         },
         {
@@ -77,6 +78,7 @@
             "minify": true,
             "namespace": "",
             "transpileTemplateLiterals": true,
+            "topLevelImportPaths": [],
             "pure": false,
             "ssr": false
           }
@@ -101,7 +103,7 @@
     "build-html": {
       "plugins": [
         {
-          "name": "babel-plugin-lodash",
+          "name": "@sigmacomputing/babel-plugin-lodash",
           "options": {}
         },
         {
@@ -126,6 +128,7 @@
             "minify": true,
             "namespace": "",
             "transpileTemplateLiterals": true,
+            "topLevelImportPaths": [],
             "pure": false,
             "ssr": true
           }
@@ -150,7 +153,7 @@
     "build-javascript": {
       "plugins": [
         {
-          "name": "babel-plugin-lodash",
+          "name": "@sigmacomputing/babel-plugin-lodash",
           "options": {}
         },
         {
@@ -175,6 +178,7 @@
             "minify": true,
             "namespace": "",
             "transpileTemplateLiterals": true,
+            "topLevelImportPaths": [],
             "pure": false,
             "ssr": true
           }
@@ -198,7 +202,7 @@
     }
   },
   "browserslist": [
-    ">0.25%",
-    "not dead"
+    ">0.25% and supports es6-module",
+    "not dead and supports es6-module"
   ]
 }
