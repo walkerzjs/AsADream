@@ -1,1 +1,0 @@
-module.exports = require("C:\\Users\\walke\\OneDrive\\Documents\\MyWorkplace\\Web projects\\AsADream\\src\\utils\\typography")
